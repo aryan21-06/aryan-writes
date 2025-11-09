@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aryan • Writings & Reflections</title>
+  <meta name="description" content="Poems, essays, scripts, and quotes — a digital workspace of love by Aryan." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="brand">
+          <div class="brand-icon">A</div>
+          <span>Aryan</span>
+        </div>
+        <nav class="nav">
+          <a href="#writings" class="nav-link">Writings</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Poems, Writings,<br>& Love</h1>
+        <p class="hero-subtitle">A digital workspace of writings exploring love, existence, and the human condition through verse and prose.</p>
+        <div class="cta-group">
+          <a href="#writings" class="btn btn-primary">Explore Writings →</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-card">
+          <div class="search-bar">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input id="searchInput" class="search-input" type="search" placeholder="Search poems, essays, quotes..." aria-label="Search writings"/>
+            </div>
+            <div class="filter-chips">
+              <button class="chip active" data-type="All">All</button>
+              <button class="chip" data-type="Poem">Poems</button>
+              <button class="chip" data-type="Essay">Essays</button>
+              <button class="chip" data-type="Script">Scripts</button>
+              <button class="chip" data-type="Quote">Quotes</button>
+            </div>
+          </div>
+          <div id="tagBar" class="tag-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="writings" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Writings</h2>
+          <p class="section-subtitle">A collection of poems, essays, and reflections</p>
+        </div>
+        <div id="writingsGrid" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-card">
+            <h3>Who I Am</h3>
+            <p>I'm Aryan Sewani, I have always been interested in writing and philosophy. Through this page, I want to share my writings with the world and re-ignite the flame of self-exploration within all of us.</p>
+          </div>
+          <div class="about-card">
+            <h3>This Site</h3>
+            <p>Built with intention—plain HTML, CSS, and vanilla JavaScript. No frameworks, no build steps. Features include dark mode, search, tag filtering, and a distraction-free reading experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-content">
+            <h2>Let's Connect</h2>
+            <p>Feel free to reach out for collaborations, feedback, or just to share thoughts on poetry and philosophy.</p>
+            <div class="contact-links">
+              <!-- REPLACE WITH YOUR INSTAGRAM USERNAME -->
+              <a href="https://instagram.com/devoted_to_that" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <!-- REPLACE WITH YOUR EMAIL ADDRESS -->
+              <a href="mailto:aryanwrites21@gmail.com" class="contact-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span>© <span id="year"></span> Aryan. All writings original.</span>
+        <a href="#writings">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="reader" class="reader">
+    <div class="reader-content">
+      <div class="reader-header">
+        <div style="flex: 1;">
+          <h3 class="reader-title" id="readerTitle"></h3>
+          <div class="reader-meta" id="readerMeta"></div>
+        </div>
+        <button class="close-btn" aria-label="Close">×</button>
+      </div>
+      <div class="reader-body" id="readerBody"></div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
